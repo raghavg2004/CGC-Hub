@@ -1,0 +1,131 @@
+/* Branch Selection Section */
+.container {
+    padding: 3rem 1rem;
+    background-color: #000; /* Black background */
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #FF9900; /* Bright orange for heading */
+    margin-bottom: 2rem;
+    text-transform: uppercase; /* Bold and standout */
+    background-color: #000; /* Black heading background */
+    padding: 1rem 0; /* Add padding for a bold look */
+    border-radius: 0.5rem; /* Rounded edges for the heading */
+    box-shadow: 0px 4px 10px rgba(255, 153, 0, 0.4); /* Subtle glow effect */
+    animation: fadeIn 1.5s ease; /* Smooth fade-in animation */
+}
+
+/* Animation for heading */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with flexible columns */
+    gap: 1.25rem; /* Space between tiles */
+}
+
+/* Card styling */
+.card {
+    background-color: #1A1A1A; /* Dark gray/black for cards */
+    border-radius: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 2px solid #2C2C2C; /* Subtle border for contrast */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: #2A2A2A; /* Slightly lighter on hover */
+    box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.5); /* Add shadow on hover */
+}
+
+/* Card Image */
+.card-img-top {
+    height: 160px; /* Image size */
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* Card Body */
+.card-body {
+    padding: 1rem; /* Body padding */
+    color: #FFF; /* White text for readability */
+    animation: slideUp 0.5s ease; /* Smooth slide-up effect for the content */
+}
+
+/* Animation for card body */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-title {
+    font-size: 1.25rem; /* Title size */
+    font-weight: bold;
+    color: #FF9900; /* Bright orange for titles */
+}
+
+/* Footer */
+footer {
+    background-color: #1A1A1A; /* Dark footer background */
+    color: #FFF; /* White footer text */
+    text-align: center;
+    border-top: 2px solid #FF9900; /* Orange accent */
+    padding: 0.75rem 0; /* Minimal padding */
+    margin-top: 1rem; /* Space between content and footer */
+    animation: fadeIn 1s ease; /* Footer fade-in animation */
+}
+
+footer p {
+    font-size: 0.875rem; /* Smaller footer font */
+    margin: 0;
+}
+
+/* Buttons and links */
+button, a {
+    background-color: #000; /* Black background */
+    color: #FFF; /* White text */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border: none; /* Border removed */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    background-color: #d6bd97; /* Bright orange on hover */
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        gap: 1rem; /* Reduced gap for better spacing */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Slightly smaller heading for mobile */
+    }
+}

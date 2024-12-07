@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./assets/icon.png">
+    <title>CGC Hub - Age Verification</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in;
+            flex-direction: column; /* Ensure it works well for mobile screens too */
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Container for warning message and underage message */
+        #warningMessage, #underageMessage {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(-100%);
+            animation: slideIn 1s forwards;
+        }
+        /* Slide-in animation for warning message */
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive h2 styles */
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ff6347;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+        /* Text size adjustment */
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        /* Button styles */
+        #warningMessage button, #underageMessage button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 25px;
+            margin: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        #warningMessage button:hover, #underageMessage button:hover {
+            background-color: #e53e35;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        #warningMessage button:active, #underageMessage button:active {
+            background-color: #c53b2d;      
+            transform: scale(1);
+        }
+        /* Animated star background */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.2;
+        }
+        /* Underage message */
+        #underageMessage {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(52, 49, 49, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(64, 63, 63, 0.6);
+            max-width: 600px;
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            #warningMessage button, #underageMessage button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            #warningMessage button, #underageMessage button {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Star Background -->
+    <div class="stars"></div>
+
+    <!-- Age Verification Warning Message -->
+    <div id="warningMessage">
+        <h2>⚠️ Age Verification Required ⚠️</h2>
+        <p>The content available on CGC Hub may contain sensitive materials.</p>
+        <p>Access to CGC Hub is strictly limited to those over the age of 18 or of legal age in your jurisdiction, whichever is greater.</p>
+        <p>We encourage parents and guardians to take the necessary steps to prevent minors from accessing inappropriate content online.</p>
+        <p>By continuing, you acknowledge that you are 18 or older and are legally permitted to access CGC Hub.</p>
+        <div>
+            <button onclick="verifyAge(true)">I am 18+</button>
+            <button onclick="verifyAge(false)">I'm under 18</button>
+        </div>
+    </div>
+
+    <!-- Underage Access Denied Message -->
+    <div id="underageMessage">
+        <h2>🚫 Access Denied 🚫</h2>
+        <p>Sorry, you must be 18 or older to access CGC Hub.</p>
+        <p>We care about your safety and well-being, and we encourage you to explore age-appropriate content.</p>
+        <p>If you are a parent or guardian, we recommend checking out parental controls for your child's safety.</p>
+        <p>Thank you for understanding.</p>
+    </div>
+
+    <script> // Function to handle age verification
+        function verifyAge(isAdult) {
+            if (isAdult) {
+                window.location.href = "home.html";
+            } else {
+                document.getElementById('warningMessage').style.display = 'none';
+                document.getElementById('underageMessage').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

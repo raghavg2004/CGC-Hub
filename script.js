@@ -4,11 +4,11 @@ const branches = {
         title: "Computer Science Engineering - Study Materials",
         semesters: {
             1: [
-                { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "BEE", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "EGD", link: "https://drive.google.com/cse-sem2-link2" },
-                { name: "PHYSICS", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "M1", link: "https://drive.google.com/cse-sem2-link1" }
+                { name: "PTU FINAL", link: "https://drive.google.com/file/d/1KAROxOHvkjggr4AeHbM_LReUgpNjnIob/view?usp=sharing" },
+                { name: "BEE", link: "https://drive.google.com/file/d/1GSWv_fqBUHDA_qiAGhiH8D-NU5s0hye_/view?usp=drive_link" },
+                { name: "EGD", link: "https://drive.google.com/file/d/1AvgqEmxWMCGQoa3EZSNf87a-8u55qv0a/view?usp=drive_link" },
+                { name: "M1", link: "https://drive.google.com/file/d/1sVHFsey7d3lq8SBLsMNZ34YvachfoEFt/view?usp=drive_link" },
+                { name: "PHYSICS", link: "https://drive.google.com/cse-sem2-link1" }
             ],
             2: [
                 { name: "PTU FINAL", link: "https://drive.google.com/file/d/16vZHc8S5AbNOFvF65alq2f5dk6Kal1UJ/view?usp=drive_link" },

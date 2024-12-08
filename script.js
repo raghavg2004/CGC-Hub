@@ -11,12 +11,12 @@ const branches = {
                 { name: "M1", link: "https://drive.google.com/cse-sem2-link1" }
             ],
             2: [
-                { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "WORKSHOP", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "M2", link: "https://drive.google.com/cse-sem2-link2" },
-                { name: "PPS", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "ENGLISH", link: "https://drive.google.com/cse-sem2-link1" },
-                { name: "CHEMISTRY", link: "https://drive.google.com/cse-sem2-link1" }
+                { name: "PTU FINAL", link: "https://drive.google.com/file/d/16vZHc8S5AbNOFvF65alq2f5dk6Kal1UJ/view?usp=drive_link" },
+                { name: "WORKSHOP", link: "https://drive.google.com/file/d/15N5k5goTKO0vfAhMRawWxthqMc9TP8-G/view?usp=drive_link" },
+                { name: "M2", link: "https://drive.google.com/file/d/1WieDU-jMbw9-1R60RvNlsFjemoj1m5wA/view?usp=drive_link" },
+                { name: "PPS", link: "https://drive.google.com/file/d/179zTHM09TUwQ55FgzgaRq9USDuPZ2tPV/view?usp=drive_link" },
+                { name: "ENGLISH", link: "https://drive.google.com/file/d/1iG_lw7v67DMgbTRyiReSKlCGb6ypHIOK/view?usp=drive_link" },
+                { name: "CHEMISTRY", link: "https://drive.google.com/file/d/1aVuPGKnjJxFjvtMwpWUW5YAjQDDpj5wB/view?usp=drive_link" }
             ],
             3: [
                 { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },

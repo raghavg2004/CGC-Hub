@@ -40,9 +40,6 @@ This project is configured for deployment on [Vercel](https://vercel.com/):
 
 The AI support feature is powered by OpenAI's GPT. To modify or enhance this functionality:
 
-1. Update the API endpoint in `src/utils/ai.js`.
-2. Customize AI-related UI components in `src/components/AI/`.
-
 ---
 
 ## Contributing

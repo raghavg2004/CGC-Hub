@@ -40,7 +40,7 @@ h2 {
 .card {
     background-color: #1A1A1A; /* Dark gray/black for cards */
     border-radius: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
     overflow: hidden;
     border: 2px solid #2C2C2C; /* Subtle border for contrast */
 }
@@ -109,7 +109,7 @@ button, a {
     text-decoration: none;
     font-weight: bold;
     border: none; /* Border removed */
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.5s ease, transform 0.5s ease;
     cursor: pointer;
 }
 

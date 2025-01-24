@@ -309,6 +309,7 @@ const branches = {
 };
 
 const contentDiv = document.getElementById("content");
+const initialContent = contentDiv.innerHTML; // Store the initial content
 
 document.querySelectorAll(".branch-tile").forEach((tile) => {
     tile.addEventListener("click", () => {
@@ -350,5 +351,11 @@ function loadBranchContent(branch) {
 }
 
 function loadHome() {
-    location.reload(); // Reload the page to show the initial content
+    contentDiv.innerHTML = initialContent; // Restore the initial content
+    document.querySelectorAll(".branch-tile").forEach((tile) => {
+        tile.addEventListener("click", () => {
+            const branch = tile.dataset.branch;
+            loadBranchContent(branch);
+        });
+    });
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./assets/icon.png">
+    <title>CGC Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Homepage Hero Section -->
+    <header class="hero bg-gray-800 text-white py-16 text-center">
+        <h1 class="text-4xl font-bold">
+            <span class="text-white">CGC</span>
+            <span class="text-orange-500">Hub</span>
+        </h1>
+        <p class="mt-4 text-xl">We are your trusted resource, offering free access to authentic notes and other essential study materials!</p>
+    </header>
+
+    <!-- Branch Selection -->
+    <section id="content" class="container mt-8">
+        <!-- Initial Branch Section -->
+        <h2 class="text-center text-3xl mb-4">Browse study materials by department, including notes, previous year questions, and more.</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Computer Science Engineering -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="cse">
+                <img src="assets/cse.jpg" class="card-img-top rounded-t-lg" alt="Computer Science Engineering">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">Computer Science Engineering</h5>
+                </div>
+            </div>
+            <!-- Information Technology -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="it">
+                <img src="assets/it.jpg" class="card-img-top rounded-t-lg" alt="Information Technology">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">Information Technology</h5>
+                </div>
+            </div>
+            <!-- Electronics and Communication Engineering -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="ece">
+                <img src="assets/ece.jpg" class="card-img-top rounded-t-lg" alt="Electronics and Communication Engineering">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">Electronics and Communication Engineering</h5>
+                </div>
+            </div>
+            <!-- Mechanical Engineering -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="me">
+                <img src="assets/me.jpg" class="card-img-top rounded-t-lg" alt="Mechanical Engineering">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">Mechanical Engineering</h5>
+                </div>
+            </div>
+            <!-- AI & DS -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="ai_ds">
+                <img src="assets/ai_ds.jpg" class="card-img-top rounded-t-lg" alt="Information Technology">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">AI & DS</h5>
+                </div>
+            </div>
+            <!-- AI & ML -->
+            <div class="card bg-gray-700 text-white shadow-lg rounded-lg hover:bg-gray-600 transition-all branch-tile" data-branch="ai_ml">
+                <img src="assets/ai_ml.jpg" class="card-img-top rounded-t-lg" alt="Electronics and Communication Engineering">
+                <div class="card-body p-6">
+                    <h5 class="card-title text-2xl">AI & ML</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-4 mt-8">
+    <p>&copy; 2025 CEC Study Hub | All Rights Reserved</p>
+</footer>
+</body>
+    <script>
+    window.embeddedChatbotConfig = {
+        chatbotId: "w9Cb4OfUh5UCCZjm0DVEO",
+        domain: "www.chatbase.co"
+    }</script>
+    <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="w9Cb4OfUh5UCCZjm0DVEO"
+        domain="www.chatbase.co"
+        defer>
+    </script>
+<script src="script.js"></script>
+</html>

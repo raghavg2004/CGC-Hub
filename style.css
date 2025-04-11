@@ -1,131 +1,508 @@
-/* Branch Selection Section */
-.container {
-    padding: 3rem 1rem;
-    background-color: #000; /* Black background */
+/* Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #f97316;
+    --primary-light: #fb923c;
+    --dark: #030712;
+    --dark-light: #111827;
+    --gray: #6b7280;
+    --light: #f9fafb;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #FF9900; /* Bright orange for heading */
-    margin-bottom: 2rem;
-    text-transform: uppercase; /* Bold and standout */
-    background-color: #000; /* Black heading background */
-    padding: 1rem 0; /* Add padding for a bold look */
-    border-radius: 0.5rem; /* Rounded edges for the heading */
-    box-shadow: 0px 4px 10px rgba(255, 153, 0, 0.4); /* Subtle glow effect */
-    animation: fadeIn 1.5s ease; /* Smooth fade-in animation */
-}
-
-/* Animation for heading */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Grid layout */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid with flexible columns */
-    gap: 1.25rem; /* Space between tiles */
-}
-
-/* Card styling */
-.card {
-    background-color: #1A1A1A; /* Dark gray/black for cards */
-    border-radius: 1rem;
-    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
-    overflow: hidden;
-    border: 2px solid #2C2C2C; /* Subtle border for contrast */
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    background-color: #2A2A2A; /* Slightly lighter on hover */
-    box-shadow: 0px 8px 20px rgba(255, 153, 0, 0.5); /* Add shadow on hover */
-}
-
-/* Card Image */
-.card-img-top {
-    height: 160px; /* Image size */
-    object-fit: cover;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-/* Card Body */
-.card-body {
-    padding: 1rem; /* Body padding */
-    color: #FFF; /* White text for readability */
-    animation: slideUp 0.5s ease; /* Smooth slide-up effect for the content */
-}
-
-/* Animation for card body */
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card-title {
-    font-size: 1.25rem; /* Title size */
-    font-weight: bold;
-    color: #FF9900; /* Bright orange for titles */
-}
-
-/* Footer */
-footer {
-    background-color: #1A1A1A; /* Dark footer background */
-    color: #FFF; /* White footer text */
-    text-align: center;
-    border-top: 2px solid #FF9900; /* Orange accent */
-    padding: 0.75rem 0; /* Minimal padding */
-    margin-top: 1rem; /* Space between content and footer */
-    animation: fadeIn 1s ease; /* Footer fade-in animation */
-}
-
-footer p {
-    font-size: 0.875rem; /* Smaller footer font */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Buttons and links */
-button, a {
-    background-color: #000; /* Black background */
-    color: #FFF; /* White text */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(to right, var(--primary), var(--primary-light));
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(249, 115, 22, 0.25);
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-view {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
+    font-weight: 500;
     text-decoration: none;
-    font-weight: bold;
-    border: none; /* Border removed */
-    transition: background-color 0.5s ease, transform 0.5s ease;
+    transition: all 0.3s ease;
+    border: none;
     cursor: pointer;
 }
 
-button:hover, a:hover {
-    background-color: #d6bd97; /* Bright orange on hover */
-    transform: translateY(-3px); /* Subtle lift effect on hover */
+.btn-view:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Branch Cards */
+.branch-card {
+    perspective: 1000px;
+    height: 300px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.branch-card:hover {
+    transform: rotateY(10deg);
+}
+
+.branch-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.branch-card:hover .branch-card-inner {
+    transform: rotateY(180deg);
+}
+
+.branch-card-front, .branch-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.branch-card-front {
+    background-color: var(--dark-light);
+}
+
+.branch-card-back {
+    background: linear-gradient(135deg, var(--dark-light), #1f2937);
+    transform: rotateY(180deg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.branch-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.branch-card-back p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.branch-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.branch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.branch-card:hover .branch-image img {
+    transform: scale(1.05);
+}
+
+.branch-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.4));
+}
+
+.branch-content {
+    padding: 1.5rem;
+}
+
+.branch-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.feature-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+/* Semester Content */
+.semester-card {
+    background: rgba(17, 24, 39, 0.7);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.semester-card:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.semester-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.semester-card h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-right: 0.75rem;
+}
+
+.subject {
+    background: rgba(31, 41, 55, 0.5);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.subject:hover {
+    background: rgba(31, 41, 55, 0.8);
+    transform: translateX(5px);
+}
+
+.subject p {
+    color: white;
+    font-weight: 500;
+}
+
+.download-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    color: var(--primary-light);
+}
+
+/* Back to Top Button */
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease forwards;
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        gap: 1rem; /* Reduced gap for better spacing */
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
     }
+    
+    .branch-card {
+        height: auto;
+        perspective: none;
+    }
+    
+    .branch-card-inner {
+        transform: none !important;
+    }
+    
+    .branch-card-front, .branch-card-back {
+        position: relative;
+        transform: none;
+        backface-visibility: visible;
+    }
+    
+    .branch-card-back {
+        display: none;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
 
-    h2 {
-        font-size: 1.5rem; /* Slightly smaller heading for mobile */
-    }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Contact Page Styles */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: var(--gray);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* About Page Styles */
+.team-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-content {
+    padding: 1.5rem;
+}
+
+.team-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: white;
+}
+
+/* Resources Page Styles */
+.resource-card {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.resource-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.resource-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    color: var(--primary-light);
+    transform: translateX(5px);
+}
+
+.popular-resource {
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.popular-resource:hover {
+    border-color: rgba(249, 115, 22, 0.3);
+    transform: translateY(-3px);
+}
+
+.popular-resource h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.download-btn {
+    background: rgba(249, 115, 22, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    white-space: nowrap;
+}
+
+.download-btn:hover {
+    background: rgba(249, 115, 22, 0.2);
+    color: var(--primary-light);
 }

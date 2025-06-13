@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
                 6: [
                     { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },
-                    { name: "WC", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "WC", link: "https://drive.google.com/file/d/1-jcJqAjoYRpj20B60x0ZLF09r-KxbJeb/view?usp=sharing" },
                     { name: "ML", link: "https://drive.google.com/file/d/1db55Rw2K1DEH13H86Xzu7E8sljbubm7W/view?usp=sharing" },
-                    { name: "MAD", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "MAD", link: "https://drive.google.com/file/d/1QMbwS-ZKsSd-WiYsXNdtQSXKUAFxteBe/view?usp=sharing" },
                     { name: "CD", link: "https://drive.google.com/file/d/1drQp9NDtfklymIJ6Po88diJ1Ze1eberx/view?usp=sharing" },
-                    { name: "CC", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "CC", link: "https://drive.google.com/file/d/1-moIA_G8r6xpXje4laV0jgWFrYcNVTgl/view?usp=sharing" },
                     { name: "AI", link: "https://drive.google.com/file/d/1d_uuZtrkLsQ5gsjQp0GZeDNMzOMhDjxP/view?usp=sharing" }
                 ],
                 7: [
@@ -117,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
                 6: [
                     { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },
-                    { name: "WC", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "WC", link: "https://drive.google.com/file/d/1-jcJqAjoYRpj20B60x0ZLF09r-KxbJeb/view?usp=sharing" },
                     { name: "ML", link: "https://drive.google.com/file/d/1db55Rw2K1DEH13H86Xzu7E8sljbubm7W/view?usp=drive_link" },
-                    { name: "MAD", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "MAD", link: "https://drive.google.com/file/d/1QMbwS-ZKsSd-WiYsXNdtQSXKUAFxteBe/view?usp=sharing" },
                     { name: "CD", link: "https://drive.google.com/file/d/1drQp9NDtfklymIJ6Po88diJ1Ze1eberx/view?usp=sharing" },
-                    { name: "CC", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "CC", link: "https://drive.google.com/file/d/1-moIA_G8r6xpXje4laV0jgWFrYcNVTgl/view?usp=sharing" },
                     { name: "AI", link: "https://drive.google.com/file/d/1d_uuZtrkLsQ5gsjQp0GZeDNMzOMhDjxP/view?usp=sharing" }
                 ],
                 7: [
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 ],
                 6: [
                     { name: "PTU FINAL", link: "https://drive.google.com/cse-sem2-link1" },
-                    { name: "WC", link: "https://drive.google.com/cse-sem2-link1" },
+                    { name: "WC", link: "https://drive.google.com/file/d/1-jcJqAjoYRpj20B60x0ZLF09r-KxbJeb/view?usp=sharing" },
                     { name: "OFC", link: "https://drive.google.com/cse-sem2-link2" },
                     { name: "MAE", link: "https://drive.google.com/cse-sem2-link1" },
                     { name: "C SHARP", link: "https://drive.google.com/cse-sem2-link1" },
